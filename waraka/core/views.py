@@ -1,7 +1,8 @@
 from django.contrib.auth.models import User
 from rest_framework import generics, permissions
 from rest_framework_simplejwt.authentication import JWTAuthentication
-from .serializers import UserSerializer
+from .serializers import UserSerializer, TaskSerializer
+from .models import Task
 
 class UserListCreateView(generics.ListCreateAPIView):
     queryset = User.objects.all()
